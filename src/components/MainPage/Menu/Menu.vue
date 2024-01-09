@@ -4,7 +4,6 @@
     :class="{ menu_section_sticky: isSticky }"
   >
     <div class="container">
-      <!-- <div class="menu_section_logo"></div> -->
       <div 
         v-if="!mobile"
         class="menu_section_links_block"
@@ -19,12 +18,22 @@
           {{ link.name }}
         </a>
       </div>
-      <div 
+      <div class="menu_section_logo"></div>
+      <div class="menu_section_call_back">
+        <div class="menu_section_call_back_icon"></div>
+        <a 
+          href="tel:+79253535010"
+          class="menu_section_links_block_link"
+        >
+        {{ "+7 (925) 353-50-10" }}
+        </a>
+      </div>
+      <!-- <div 
         class="menu_section_call_back"
         @click="() => handleClickCallBack()"
       >
         {{ "Заказать консультацию" }}
-      </div>
+      </div> -->
       <!-- <div 
         v-if="mobile"
         class="menu_section_links_block_mobile"
@@ -83,11 +92,11 @@ export default {
       })
       this.handleOpenMenu()
     },
-    handleClickCallBack () {
-      this.$store.state.form.show = true
-      document.querySelector('body').style.heigth = "100vh";
-      document.querySelector('body').style.overflow = "hidden";
-    },
+    // handleClickCallBack () {
+    //   this.$store.state.form.show = true
+    //   document.querySelector('body').style.heigth = "100vh";
+    //   document.querySelector('body').style.overflow = "hidden";
+    // },
     handleOpenMenu () {
       this.openMenu = !this.openMenu
     },

@@ -4,16 +4,20 @@ const store = createStore({
   state: {
     menu: [
       {
+        name: "О нас",
+        url: "aboutus"
+      },
+      {
         name: "Услуги",
         url: "uslugi"
       },
       {
-        name: "Почему мы?",
-        url: "whyus"
+        name: "Работы",
+        url: "portfolio"
       },
       {
-        name: "Информация",
-        url: "about_expertise"
+        name: "Отзывы",
+        url: "reviews"
       },
       {
         name: "Контакты",
